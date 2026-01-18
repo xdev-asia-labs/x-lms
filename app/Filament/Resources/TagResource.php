@@ -6,8 +6,8 @@ use App\Filament\Resources\TagResource\Pages;
 use App\Filament\Resources\TagResource\RelationManagers;
 use App\Models\Tag;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -17,13 +17,14 @@ class TagResource extends Resource
 {
     protected static ?string $model = Tag::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-tag';
-
-
-
-    public static function form(Form $form): Form
+    public static function getNavigationIcon(): ?string
     {
-        return $form
+        return 'heroicon-o-tag';
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return $schema
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required(),
