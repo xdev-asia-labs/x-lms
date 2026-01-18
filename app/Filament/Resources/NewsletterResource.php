@@ -21,6 +21,10 @@ class NewsletterResource extends Resource
     {
         return 'heroicon-o-envelope';
     }
+    
+    protected static ?string $navigationGroup = 'System';
+    
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {

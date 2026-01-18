@@ -21,6 +21,10 @@ class PostResource extends Resource
     {
         return 'heroicon-o-document-text';
     }
+    
+    protected static ?string $navigationGroup = 'Content';
+    
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {

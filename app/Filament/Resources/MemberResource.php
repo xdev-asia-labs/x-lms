@@ -21,6 +21,10 @@ class MemberResource extends Resource
     {
         return 'heroicon-o-users';
     }
+    
+    protected static ?string $navigationGroup = 'Users';
+    
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {

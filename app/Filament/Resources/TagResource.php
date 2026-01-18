@@ -21,6 +21,10 @@ class TagResource extends Resource
     {
         return 'heroicon-o-tag';
     }
+    
+    protected static ?string $navigationGroup = 'Content';
+    
+    protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema
     {
