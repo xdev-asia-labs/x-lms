@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Member Login')
+@section('title', __('Login'))
 
 @section('content')
 <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
         <div>
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                Sign in to your account
+                {{ __('Sign in to your account') }}
             </h2>
             <p class="mt-2 text-center text-sm text-gray-600">
-                Or
+                {{ __('Or') }}
                 <a href="{{ route('member.register') }}" class="font-medium text-indigo-600 hover:text-indigo-500">
-                    create a new account
+                    {{ __('create a new account') }}
                 </a>
             </p>
         </div>
@@ -34,7 +34,7 @@
                 <div class="flex">
                     <div class="ml-3">
                         <h3 class="text-sm font-medium text-red-800">
-                            There were errors with your submission
+                            {{ __('There were errors with your submission') }}
                         </h3>
                         <div class="mt-2 text-sm text-red-700">
                             <ul class="list-disc pl-5 space-y-1">

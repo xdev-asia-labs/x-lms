@@ -185,7 +185,7 @@ class MemberAuthController extends Controller
     {
         $member = Member::findOrFail($id);
 
-        if (!hash_equals((string) $hash, sha1($member->getEmailForVerification()))) {
+        if (! hash_equals((string) $hash, sha1($member->getEmailForVerification()))) {
             throw ValidationException::withMessages([
                 'email' => ['The verification link is invalid.'],
             ]);
