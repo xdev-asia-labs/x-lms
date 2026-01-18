@@ -17,6 +17,7 @@ X-LMS là một nền tảng quản lý học tập (LMS) hiện đại, đượ
 ### ✨ Key Features
 
 **📚 Course Management**
+
 - Flexible post system (blog, courses, lessons, news, showcase)
 - Multi-author support
 - SEO-optimized content
@@ -24,18 +25,21 @@ X-LMS là một nền tảng quản lý học tập (LMS) hiện đại, đượ
 - Rich content editor
 
 **👥 User Management**
+
 - Dual authentication system (Admin + Members)
 - Course enrollment tracking
 - Lesson progress monitoring
 - Member dashboard (coming soon)
 
 **📊 Progress Tracking**
+
 - Time spent on lessons
 - Completion status
 - Learning analytics
 - Enrollment history
 
 **🎨 Admin Panel**
+
 - Powerful Filament admin interface
 - Member management
 - Content management
@@ -43,12 +47,14 @@ X-LMS là một nền tảng quản lý học tập (LMS) hiện đại, đượ
 - Analytics dashboard (coming soon)
 
 **🔌 RESTful API**
+
 - Public content API
 - Authenticated member API
 - Progress tracking endpoints
 - Laravel Sanctum authentication
 
 **🐳 Developer-Friendly**
+
 - Docker development environment
 - PostgreSQL + pgAdmin
 - Mailhog for email testing
@@ -69,24 +75,28 @@ X-LMS là một nền tảng quản lý học tập (LMS) hiện đại, đượ
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone git@github.com:xdev-asia-labs/x-lms.git
 cd x-lms
 ```
 
-2. **Install dependencies**
+1. **Install dependencies**
+
 ```bash
 composer install
 npm install
 ```
 
-3. **Environment setup**
+1. **Environment setup**
+
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-4. **Configure database** (edit `.env`)
+1. **Configure database** (edit `.env`)
+
 ```env
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
@@ -96,22 +106,26 @@ DB_USERNAME=your_username
 DB_PASSWORD=your_password
 ```
 
-5. **Run migrations**
+1. **Run migrations**
+
 ```bash
 php artisan migrate
 ```
 
-6. **Seed database** (optional)
+1. **Seed database** (optional)
+
 ```bash
 php artisan db:seed
 ```
 
-7. **Build assets**
+1. **Build assets**
+
 ```bash
 npm run build
 ```
 
-8. **Start development server**
+1. **Start development server**
+
 ```bash
 php artisan serve
 ```
@@ -126,6 +140,7 @@ Admin Panel: `http://localhost:8000/admin`
 For Docker-based development, see [DOCKER_README.md](DOCKER_README.md).
 
 **Quick Docker start:**
+
 ```bash
 make setup      # Initial setup
 make up         # Start containers
@@ -133,9 +148,10 @@ make migrate    # Run migrations
 ```
 
 Access:
-- **App**: http://localhost:8000
-- **pgAdmin**: http://localhost:5050
-- **Mailhog**: http://localhost:8025
+
+- **App**: <http://localhost:8000>
+- **pgAdmin**: <http://localhost:5050>
+- **Mailhog**: <http://localhost:8025>
 
 ---
 
@@ -153,18 +169,21 @@ Access:
 ## 🏗️ Technology Stack
 
 **Backend:**
+
 - [Laravel 12.0](https://laravel.com) - PHP framework
 - [Filament 3.2](https://filamentphp.com) - Admin panel
 - [Laravel Sanctum](https://laravel.com/docs/sanctum) - API authentication
 - [PostgreSQL 15](https://postgresql.org) - Database
 
 **Frontend:**
+
 - [Blade](https://laravel.com/docs/blade) - Templating engine
 - [Tailwind CSS](https://tailwindcss.com) - CSS framework
 - [Alpine.js](https://alpinejs.dev) - JavaScript framework
 - [Vite](https://vitejs.dev) - Build tool
 
 **DevOps:**
+
 - Docker & Docker Compose
 - Nginx
 - Redis
@@ -179,6 +198,7 @@ Access:
 **Progress:** ~40% complete
 
 ### ✅ Implemented
+
 - Course enrollment system
 - Lesson progress tracking
 - Content management (posts, tags, authors)
@@ -187,11 +207,13 @@ Access:
 - Docker development environment
 
 ### 🔄 In Progress
+
 - Member authentication UI
 - Member dashboard
 - API documentation
 
 ### 📅 Planned
+
 - Quiz & assessment system
 - Email notifications
 - Payment integration
@@ -213,6 +235,7 @@ We welcome contributions! To contribute:
 5. Open a Pull Request
 
 **Commit Convention:** Follow [Conventional Commits](https://www.conventionalcommits.org/)
+
 - `feat:` - New features
 - `fix:` - Bug fixes
 - `docs:` - Documentation changes
@@ -224,7 +247,7 @@ We welcome contributions! To contribute:
 
 ## 🔒 Security
 
-If you discover a security vulnerability, please send an email to security@xdev.asia. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability, please send an email to <security@xdev.asia>. All security vulnerabilities will be promptly addressed.
 
 **Please do not** open public issues for security vulnerabilities.
 
@@ -247,6 +270,7 @@ X-LMS is open-source software licensed under the [MIT license](LICENSE).
 ## 🙏 Acknowledgments
 
 Built with amazing open-source technologies:
+
 - [Laravel](https://laravel.com) - The PHP Framework
 - [Filament](https://filamentphp.com) - Admin Panel Builder
 - [Tailwind CSS](https://tailwindcss.com) - CSS Framework
@@ -259,11 +283,10 @@ Built with amazing open-source technologies:
 - **Documentation**: See docs folder và markdown files
 - **Issues**: [GitHub Issues](https://github.com/xdev-asia-labs/x-lms/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/xdev-asia-labs/x-lms/discussions)
-- **Email**: support@xdev.asia
+- **Email**: <support@xdev.asia>
 
 ---
 
 **Last Updated**: January 18, 2026  
 **Version**: 0.1.0  
 **Status**: Active Development 🚧
-
