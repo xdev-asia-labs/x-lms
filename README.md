@@ -1,59 +1,269 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# X-LMS - Learning Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> A modern, scalable Learning Management System built with Laravel 12, Filament 3.2, and PostgreSQL.
 
-## About Laravel
+[![Laravel](https://img.shields.io/badge/Laravel-12.0-red.svg)](https://laravel.com)
+[![Filament](https://img.shields.io/badge/Filament-3.2-orange.svg)](https://filamentphp.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://postgresql.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📖 About X-LMS
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+X-LMS là một nền tảng quản lý học tập (LMS) hiện đại, được thiết kế để phục vụ các tổ chức giáo dục và doanh nghiệp. Hệ thống cung cấp đầy đủ các tính năng cần thiết để tạo, quản lý, và theo dõi các khóa học trực tuyến.
 
-## Learning Laravel
+### ✨ Key Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**📚 Course Management**
+- Flexible post system (blog, courses, lessons, news, showcase)
+- Multi-author support
+- SEO-optimized content
+- Tag categorization
+- Rich content editor
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**👥 User Management**
+- Dual authentication system (Admin + Members)
+- Course enrollment tracking
+- Lesson progress monitoring
+- Member dashboard (coming soon)
 
-## Laravel Sponsors
+**📊 Progress Tracking**
+- Time spent on lessons
+- Completion status
+- Learning analytics
+- Enrollment history
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+**🎨 Admin Panel**
+- Powerful Filament admin interface
+- Member management
+- Content management
+- Newsletter subscriptions
+- Analytics dashboard (coming soon)
 
-### Premium Partners
+**🔌 RESTful API**
+- Public content API
+- Authenticated member API
+- Progress tracking endpoints
+- Laravel Sanctum authentication
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+**🐳 Developer-Friendly**
+- Docker development environment
+- PostgreSQL + pgAdmin
+- Mailhog for email testing
+- Redis caching ready
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🚀 Quick Start
 
-## Code of Conduct
+### Prerequisites
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- PHP 8.2 or higher
+- Composer
+- Node.js & NPM
+- PostgreSQL 15+ (or use Docker)
+- Git
 
-## Security Vulnerabilities
+### Installation
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. **Clone the repository**
+```bash
+git clone git@github.com:xdev-asia-labs/x-lms.git
+cd x-lms
+```
 
-## License
+2. **Install dependencies**
+```bash
+composer install
+npm install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. **Environment setup**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. **Configure database** (edit `.env`)
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=x_lms
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+5. **Run migrations**
+```bash
+php artisan migrate
+```
+
+6. **Seed database** (optional)
+```bash
+php artisan db:seed
+```
+
+7. **Build assets**
+```bash
+npm run build
+```
+
+8. **Start development server**
+```bash
+php artisan serve
+```
+
+Visit: `http://localhost:8000`  
+Admin Panel: `http://localhost:8000/admin`
+
+---
+
+## 🐳 Docker Setup
+
+For Docker-based development, see [DOCKER_README.md](DOCKER_README.md).
+
+**Quick Docker start:**
+```bash
+make setup      # Initial setup
+make up         # Start containers
+make migrate    # Run migrations
+```
+
+Access:
+- **App**: http://localhost:8000
+- **pgAdmin**: http://localhost:5050
+- **Mailhog**: http://localhost:8025
+
+---
+
+## 📚 Documentation
+
+- **[FEATURES.md](FEATURES.md)** - Comprehensive feature list
+- **[TODO.md](TODO.md)** - Development task tracking
+- **[ROADMAP.md](ROADMAP.md)** - Quarterly milestone planning
+- **[CHANGELOG.md](CHANGELOG.md)** - Version history
+- **[DOCKER_README.md](DOCKER_README.md)** - Docker setup guide
+- **[POSTGRESQL_SETUP.md](POSTGRESQL_SETUP.md)** - PostgreSQL configuration
+
+---
+
+## 🏗️ Technology Stack
+
+**Backend:**
+- [Laravel 12.0](https://laravel.com) - PHP framework
+- [Filament 3.2](https://filamentphp.com) - Admin panel
+- [Laravel Sanctum](https://laravel.com/docs/sanctum) - API authentication
+- [PostgreSQL 15](https://postgresql.org) - Database
+
+**Frontend:**
+- [Blade](https://laravel.com/docs/blade) - Templating engine
+- [Tailwind CSS](https://tailwindcss.com) - CSS framework
+- [Alpine.js](https://alpinejs.dev) - JavaScript framework
+- [Vite](https://vitejs.dev) - Build tool
+
+**DevOps:**
+- Docker & Docker Compose
+- Nginx
+- Redis
+- Mailhog
+
+---
+
+## 🎯 Project Status
+
+**Current Version:** 0.1.0  
+**Status:** Active Development 🚧  
+**Progress:** ~40% complete
+
+### ✅ Implemented
+- Course enrollment system
+- Lesson progress tracking
+- Content management (posts, tags, authors)
+- Filament admin panel
+- RESTful API endpoints
+- Docker development environment
+
+### 🔄 In Progress
+- Member authentication UI
+- Member dashboard
+- API documentation
+
+### 📅 Planned
+- Quiz & assessment system
+- Email notifications
+- Payment integration
+- Certificate generation
+- Live streaming
+
+See [ROADMAP.md](ROADMAP.md) for detailed timeline.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! To contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+**Commit Convention:** Follow [Conventional Commits](https://www.conventionalcommits.org/)
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `docs:` - Documentation changes
+- `refactor:` - Code refactoring
+- `test:` - Adding tests
+- `chore:` - Maintenance tasks
+
+---
+
+## 🔒 Security
+
+If you discover a security vulnerability, please send an email to security@xdev.asia. All security vulnerabilities will be promptly addressed.
+
+**Please do not** open public issues for security vulnerabilities.
+
+---
+
+## 📄 License
+
+X-LMS is open-source software licensed under the [MIT license](LICENSE).
+
+---
+
+## 👥 Team
+
+**Developed by**: [X-Dev Asia Labs](https://xdev.asia)  
+**Maintained by**: Development Team  
+**Repository**: [github.com/xdev-asia-labs/x-lms](https://github.com/xdev-asia-labs/x-lms)
+
+---
+
+## 🙏 Acknowledgments
+
+Built with amazing open-source technologies:
+- [Laravel](https://laravel.com) - The PHP Framework
+- [Filament](https://filamentphp.com) - Admin Panel Builder
+- [Tailwind CSS](https://tailwindcss.com) - CSS Framework
+- [PostgreSQL](https://postgresql.org) - Database
+
+---
+
+## 📞 Support & Contact
+
+- **Documentation**: See docs folder và markdown files
+- **Issues**: [GitHub Issues](https://github.com/xdev-asia-labs/x-lms/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/xdev-asia-labs/x-lms/discussions)
+- **Email**: support@xdev.asia
+
+---
+
+**Last Updated**: January 18, 2026  
+**Version**: 0.1.0  
+**Status**: Active Development 🚧
+
